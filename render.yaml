@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: feeltrack-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn api.main:app --host=0.0.0.0 --port=10000"
+    runtime: python
+    branch: main
+    autoDeploy: true
+    envVars:
+  - key: HF_TOKEN
+    value: ${HF_TOKEN}

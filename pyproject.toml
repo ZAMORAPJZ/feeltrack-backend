@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "review-analyzer"
+version = "0.1.0"
+description = "Proyecto de clasificación de emociones en reseñas de productos y servicios de empresas comerciales"
+authors = [
+    { name = "Raulinho-A" },
+    { name = "DianCarolinee" },
+    { name = "77paucar" },
+    { name = "IamSebx" },
+    { name = "ZAMORAPJZ" },
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["review_analyzer*"]
