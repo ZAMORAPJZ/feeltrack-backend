@@ -1,14 +1,12 @@
 services:
   - type: web
     name: feeltrack-api
-    env: python
+    env: docker
     region: oregon
-    plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn api.main:app --host=0.0.0.0 --port=10000"
-    runtime: python
+    plan: free   # Usa "starter" si ya pagaste
     branch: main
     autoDeploy: true
+    dockerfilePath: Dockerfile
     envVars:
-  - key: HF_TOKEN
-    value: ${HF_TOKEN}
+      - key: HF_TOKEN
+        value: ${HF_TOKEN}
